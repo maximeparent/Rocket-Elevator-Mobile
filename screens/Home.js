@@ -1,11 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, StatusBar } from 'react-native';
-import { AppLoading } from 'expo';
-import Navigator from './routes/homeStack';
 
-export default function App() {
+
+
+export default function Home(){
   return (
-      <Navigator/>
+    <View style={styles.container}>
+    <Text style={styles.welcome}>Home</Text>
+  </View>
   );
 }
 
