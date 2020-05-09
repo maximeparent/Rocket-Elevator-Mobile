@@ -9,6 +9,10 @@ export default function Login({ navigation }){
     navigation.navigate('Status');
     
   }
+  const logout = () => {
+    navigation.navigate('Login');
+    
+  }
   return (
     <ImageBackground source={require('../assets/elevator-image.jpg')} style={styles.container}>
     <View style={styles.container}>
@@ -21,6 +25,12 @@ export default function Login({ navigation }){
         <Text style= {styles.btnTxt}>Go To Status</Text>
       </TouchableOpacity>
     </View>
+    <TouchableOpacity
+      style={styles.userBtn2}
+      onPress= {logout}
+      >
+        <Text style= {styles.btnTxt}>Log Out</Text>
+      </TouchableOpacity>
   </View>
   </ImageBackground>
   );
@@ -50,7 +60,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   userBtn: {
-    backgroundColor: "#FFD700",
+    backgroundColor: "#2DA2F0",
+    padding: 15,
+    width: "45%"
+  },
+  userBtn2: {
+    backgroundColor: "#B2B2B2",
     padding: 15,
     width: "45%"
   },

@@ -29,7 +29,7 @@ export default function Login({ navigation }){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1e90ff',
+    backgroundColor: '#A5A4A4',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   userBtn: {
-    backgroundColor: "#FFD700",
+    backgroundColor: "#2DA2F0",
     padding: 15,
     width: "45%"
   },
