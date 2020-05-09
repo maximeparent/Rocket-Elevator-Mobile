@@ -1,20 +1,34 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, StatusBar, ImageBackground } from 'react-native';
 
 
 
-export default function Home(){
+export default function Login({ navigation }){
+
+  const pressHandler2 = () => {
+    navigation.navigate('Status');
+    
+  }
   return (
+    <ImageBackground source={require('../assets/elevator-image.jpg')} style={styles.container}>
     <View style={styles.container}>
     <Text style={styles.welcome}>Home</Text>
+    <View style={styles.btnContainer}>
+      <TouchableOpacity
+      style={styles.userBtn}
+      onPress= {pressHandler2}
+      >
+        <Text style= {styles.btnTxt}>Go To Status</Text>
+      </TouchableOpacity>
+    </View>
   </View>
+  </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1e90ff',
     alignItems: 'center',
     justifyContent: 'center',
   },

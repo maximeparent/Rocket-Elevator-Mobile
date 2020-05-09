@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, StatusBar, Image, ImageBackground } from 'react-native';
 
 
 
@@ -10,19 +10,19 @@ export default function Login({ navigation }){
     
   }
   return (
-    <View style={styles.container}>
+  
+      <View style={styles.container}>
     <Text style={styles.welcome}>Login</Text>
     <TextInput style={styles.input} 
     placeholder= "Email"/>
     <View style={styles.btnContainer}>
       <TouchableOpacity
       style={styles.userBtn}
-      onPress= {pressHandler}
-      >
+      onPress= {pressHandler}>
         <Text style= {styles.btnTxt}>Enter</Text>
       </TouchableOpacity>
+      </View>
     </View>
-  </View>
   );
 }
 

@@ -1,30 +1,29 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, StatusBar, ImageBackground, Image } from 'react-native';
 
 
 
 export default function Login(){
   return (
+    <ImageBackground source={require('../assets/elevator-image.jpg')} style={styles.container}>
     <View style={styles.container}>
-    <Text style={styles.welcome}>New Login</Text>
-    <TextInput style={styles.input} 
-    placeholder= "Email"/>
+    <Text style={styles.welcome}>Elevators Status</Text>
+    
     <View style={styles.btnContainer}>
       <TouchableOpacity
       style={styles.userBtn}
-      onPress= {() => alert("Welcome")}
-      >
-        <Text style= {styles.btnTxt}>Login</Text>
+      onPress= {() => alert("Status")}>
+        <Text style= {styles.btnTxt}>Get The Status</Text>
       </TouchableOpacity>
     </View>
   </View>
+  </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1e90ff',
     alignItems: 'center',
     justifyContent: 'center',
   },
